@@ -1,0 +1,15 @@
+{
+  "name": "qvac-cold-email-opener-writer",
+  "version": "1.0.0",
+  "description": "Enter the recipient's role/company and your reason for reaching out, get a short personalized opening line for a professional outreach email, generated on-device. No cloud call, no API key.",
+  "type": "module",
+  "main": "src/gui.js",
+  "scripts": {
+    "start": "node src/gui.js",
+    "gui": "node src/gui.js"
+  },
+  "keywords": ["qvac", "on-device-ai", "outreach", "llm", "offline-ai"],
+  "license": "MIT",
+  "dependencies": { "@qvac/sdk": "^0.19.0" },
+  "engines": { "node": ">=22.17" }
+}
