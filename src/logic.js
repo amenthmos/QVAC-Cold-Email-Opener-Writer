@@ -20,6 +20,10 @@ function looksUnusable(text) {
 function stripWrapping(text) {
   return text
     .trim()
+    // The model is told never to include a subject line, but small models
+    // sometimes add one anyway — strip a leading "Subject: ..." line before
+    // anything else so it never leaks into the opener shown to the user.
+    .replace(/^subject:[^\n]*\n+/i, "")
     .replace(/^here'?s[^:\n]*:\s*/i, "")
     .replace(/^opener:\s*/i, "")
     .replace(/^opening line:\s*/i, "")
